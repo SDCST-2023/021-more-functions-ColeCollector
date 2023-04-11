@@ -20,9 +20,39 @@ assert triangle(5,15,12) == 3
 assert triangle(1,1,4) == 0  
 (2 points)
 """
+import math
 
-def triangle():
-    return
+def triangle(a,b,c):
+    hyp = max(a,b,c)
+
+    #determining the hypoteneuse
+    if hyp == c:
+        side1 = a
+        side2 = b
+    
+    elif hyp == b:
+        side1 = a
+        side2 = c
+
+    elif hyp == a:
+        side1 = c
+        side2 = b
+
+    #determining the type of triangle
+    if side1 + side2 <hyp:
+        return 0 
+
+    if side1**2+side2**2>hyp**2:
+        return 1
+
+    if side1**2+side2**2==hyp**2:
+        return 2
+
+    if side1**2+side2**2<hyp**2:
+        return 3
+    
+
+
 
 def tests():
     assert triangle(12,5,13) == 2     

@@ -18,9 +18,9 @@ def convertTemp(a,b):
         convert = (a * 9/5) + 32
 
     if b == 'F':
-        convert = (a − 32) * (5/9)
+        convert = (a - 32) * (5/9)
 
-
+    convert = round(convert,2)
     return convert
 
 def tests():
